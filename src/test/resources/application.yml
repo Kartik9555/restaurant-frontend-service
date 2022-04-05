@@ -1,0 +1,20 @@
+spring:
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      group-id: baeldung
+    bootstrapServer: ${spring.embedded.kafka.brokers}
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+
+kafka:
+  bootstrapServer: ${spring.embedded.kafka.brokers}
+  consumers:
+    consumerGroup: justeat-consumer
+  topic:
+    status-update: UPDATE_STATUS
+
+application:
+  name: JET
+
